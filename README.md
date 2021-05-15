@@ -12,6 +12,7 @@ dashboard 접속
 $ token=$(microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
 $ microk8s kubectl -n kube-system describe secret $token
 
+sudo snap alias microk8s.kubectl kubectl
 
 port forward
 https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
