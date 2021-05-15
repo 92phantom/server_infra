@@ -1,0 +1,41 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'gateway.api.msa'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+targetCompatibility = 1.8
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "Hoxton.SR8")
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
