@@ -2,7 +2,7 @@
 
 # install microk8s
 
-$ sudo snap install microk8s --classic
+$ sudo snap install microk8s --classic --channel=1.13/stable
 $ microk8s enable dns dashboard storage
 
 dashboard 설치 확인 
