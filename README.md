@@ -35,12 +35,12 @@ minikube로 환승
 Minikube 192.168.99.100으로 고정으로 키는 방법
 
 VirtualBox 다 끈채로
-mkdir ~/.config/VirtualBox/leasebackup/
-mv ~/.config/VirtualBox/*.leases ~/.config/VirtualBox/leasebackup/
-mv ~/.config/VirtualBox/*.leases-prev ~/.config/VirtualBox/leasebackup/
-VBoxManage hostonlyif remove vboxnet0
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-minikube start --memory 8000 --cpus 2 --kubernetes-version v1.10.0
+mkdir ~/.config/VirtualBox/leasebackup/  
+mv ~/.config/VirtualBox/*.leases ~/.config/VirtualBox/leasebackup/  
+mv ~/.config/VirtualBox/*.leases-prev ~/.config/VirtualBox/leasebackup/  
+VBoxManage hostonlyif remove vboxnet0  
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%  
+minikube start --memory 8000 --cpus 2 --kubernetes-version v1.10.0  
 
 
 
