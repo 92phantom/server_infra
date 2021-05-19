@@ -44,6 +44,8 @@ minikube start --memory 8000 --cpus 2 --kubernetes-version v1.10.0
 
 
 
+
+
 # MariaDB 설치
 
 # GateWay 설정
